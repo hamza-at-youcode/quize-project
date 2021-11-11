@@ -15,11 +15,11 @@ int main(){
 
     int ans[] = {0,0,1},tmpAns,score = 0;    
 
-    printf("\n***** Welcome to youCode Quize *****\n\n");
-
     for (i = 0; i < 3; i++)
     {
         system("cls");
+        printf("\n***** Welcome to youCode Quize *****\n\n");
+        
         printf("Q%d: %s\n",i,qst[i]);
         for (j = 0; j < 3; j++)
         {
