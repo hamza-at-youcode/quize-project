@@ -1,9 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+#define NUM_OF_QST 3
+
 int main(){
 
-    int i,j;
+    int i,j,nq = NUM_OF_QST;
 
     char *qst[] = {"What is my name?","How old am I?","What is my favorite clr?"};
 
@@ -15,13 +17,16 @@ int main(){
 
     int ans[] = {0,0,1},tmpAns,score = 0;    
 
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < nq; i++)
     {
         system("cls");
-        printf("\n***** Welcome to youCode Quize *****\n\n");
+        printf("\n***** Welcome to youCode Quize *****\n");
+        printf("***** Question %d/%d, Score:%d\n",i+1,score,nq);
+        printf("************************************\n\n");
+
         
         printf("Q%d: %s\n",i,qst[i]);
-        for (j = 0; j < 3; j++)
+        for (j = 0; j < nq; j++)
         {
            printf("\t%d - %s\n",j,choice[i][j]);
         }
