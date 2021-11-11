@@ -18,7 +18,9 @@ int main(){
         {"int arr[];","int arr[] = {'1','7','9'};","int arr[] = {2,7,8}"}
     };
 
-    int ans[] = {0,0,0,1,0,2},tmpAns,score = 0;    
+    int ans[] = {0,0,0,1,0,2},tmpAns,score = 0;  
+
+    int attempt = 1;  
 
     for (i = 0; i < nq; i++)
     {
@@ -36,21 +38,22 @@ int main(){
         
         printf("Answer: ");
         scanf("%d",&tmpAns);
-        if(ans[i] == tmpAns) score+=4;
+        if(ans[i] == tmpAns){
+            score+=4;
+        }else{
+            printf("You still have one attempt don't miss it ;)");
+            printf("\nAnswer: ");
+            scanf("%d",&tmpAns);
+            if(ans[i] == tmpAns) score+=2;
+        }
     }
 
     printf("\n\n\tYour score is: %d - ",score);
 
-    if (score > 8 && score <= 12){
-        printf("Good");
-    }else if (score > 12 && score < 16)
-    {
-        printf("Very Good!");
-    }else if (score > 16)
-    {
-        printf("Exellent!!!");
-    }else {printf("Try again ;(");}
-    
+    if (score > 8 && score <= 12) printf("Good");
+    else if (score > 12 && score < 16) printf("Very Good!");
+    else if (score > 16) printf("Exellent!!!");
+    else printf("Try again ;(");
     
     
 }
