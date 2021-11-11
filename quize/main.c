@@ -36,9 +36,21 @@ int main(){
         
         printf("Answer: ");
         scanf("%d",&tmpAns);
-        if(ans[i] == tmpAns) score+=2;
+        if(ans[i] == tmpAns) score+=4;
     }
 
-    printf("\n\n\tYour score is: %d",score);
+    printf("\n\n\tYour score is: %d - ",score);
+
+    if (score > 8 && score <= 12){
+        printf("Good");
+    }else if (score > 12 && score < 16)
+    {
+        printf("Very Good!");
+    }else if (score > 16)
+    {
+        printf("Exellent!!!");
+    }else {printf("Try again ;(");}
+    
+    
     
 }
