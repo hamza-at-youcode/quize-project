@@ -1,21 +1,24 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#define NUM_OF_QST 3
+#define NUM_OF_QST 6
 
 int main(){
 
     int i,j,nq = NUM_OF_QST;
 
-    char *qst[] = {"What is my name?","How old am I?","What is my favorite clr?"};
+    char *qst[] = {"Git is:","Who created C language?","What is the size of an integer?","The command cd stands for:","Choose the right syntax:","How to declare an array of integers in c?"};
 
-    char *choice[][3] = {
-        {"Hamza","Ayoub","Yassine"},
-        {"22","23","20"},
-        {"Green","B&W","Any"}
+    char *choice[][6] = {
+        {"A version control system","A cloud-based hosting service","Both answers are corect"},
+        {"Dennis Ritchie","Jack Ma","Brendan Eich"},
+        {"2 to 4","8","10"},
+        {"change directorey","change directory","create directory"},
+        {"scanf(\"%d\",&nbr);","scanf(\"%d\",nbr);","None of those"},
+        {"int arr[];","int arr[] = {'1','7','9'};","int arr[] = {2,7,8}"}
     };
 
-    int ans[] = {0,0,1},tmpAns,score = 0;    
+    int ans[] = {0,0,0,1,0,2},tmpAns,score = 0;    
 
     for (i = 0; i < nq; i++)
     {
@@ -26,7 +29,7 @@ int main(){
 
         
         printf("Q%d: %s\n",i,qst[i]);
-        for (j = 0; j < nq; j++)
+        for (j = 0; j < 3; j++)
         {
            printf("\t%d - %s\n",j,choice[i][j]);
         }
