@@ -24,7 +24,7 @@ int main(){
     {
         system("cls");
         printf("\n***** Welcome to youCode Quize *****\n");
-        printf("***** Question %d/%d, Score:%d\n",i+1,score,nq);
+        printf("***** Question %d/%d, Score:%d\n",i+1,nq,score);
         printf("************************************\n\n");
 
         
